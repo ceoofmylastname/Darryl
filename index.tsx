@@ -1,25 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-const App = () => {
-  return (
-    <div style={{
-      background: 'black',
-      color: 'white',
-      fontSize: '32px',
-      padding: '40px'
-    }}>
-      ✅ REACT IS MOUNTING
-      <br />
-      Your app is running.
-    </div>
-  );
-};
+const Test = () => (
+  <div style={{
+    background: '#020617',
+    color: 'white',
+    fontSize: 28,
+    padding: 50
+  }}>
+    ✅ REACT BOOTED SUCCESSFULLY
+  </div>
+);
 
 const root = document.getElementById('root');
 
 if (!root) {
-  throw new Error('Root element not found');
+  throw new Error('Root not found');
 }
 
-ReactDOM.createRoot(root).render(<App />);
+ReactDOM.createRoot(root).render(<Test />);
