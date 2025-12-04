@@ -1,21 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
+import App from './App';
 
-const Test = () => (
-  <div style={{
-    background: '#020617',
-    color: 'white',
-    fontSize: 28,
-    padding: 50
-  }}>
-    ✅ REACT BOOTED SUCCESSFULLY
-  </div>
-);
+const container = document.getElementById('root');
 
-const root = document.getElementById('root');
-
-if (!root) {
-  throw new Error('Root not found');
+if (!container) {
+  throw new Error("Root container missing in index.html");
 }
 
-ReactDOM.createRoot(root).render(<Test />);
+const root = createRoot(container);
+root.render(<App />);
